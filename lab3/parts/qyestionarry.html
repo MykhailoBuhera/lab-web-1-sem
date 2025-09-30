@@ -16,7 +16,7 @@
       <legend>Особисті дані</legend>
 
       <label for="name1">Ім’я:</label>
-      <input type="text" id="name1" name="name" placeholder="Введіть ім’я" required><br><br>
+      <input type="text" id="name1" name="name" placeholder="Введіть ім’я" required tabindex="1"><br><br>
 
       <label for="password1">Пароль:</label>
       <input type="password" id="password1" name="password" 
@@ -26,7 +26,7 @@
              required><br><br>
 
       <label for="email1">Email:</label>
-      <input type="email" id="email1" name="email" placeholder="Введіть email" required><br><br>
+      <input type="email" id="email1" name="email" placeholder="Введіть email" required tabindex="2"><br><br>
 
       <label for="phone1">Мобільний:</label>
       <input type="tel" id="phone1" name="phone" placeholder="+380..." required><br><br>
@@ -68,17 +68,16 @@
         <option value="Haskel">Haskel</option>
       </select><br><br>
 
-      <p>Групи предметів:</p>
-      <select name="grouped">
-        <optgroup label="Природничі науки">
-          <option value="math">Математика</option>
-          <option value="physics">Фізика</option>
-          <option value="chemistry">Хімія</option>
+      <p>GAme group</p>
+      <select name="Ваша улюблена гра">
+        <optgroup label="Для чоловіків">
+          <option value="colda">Call of duty</option>
+          <option value="tank">Танки</option>
+          <option value="Hoist the iron">Хойка</option>
         </optgroup>
-        <optgroup label="Гуманітарні науки">
-          <option value="history">Історія</option>
-          <option value="philosophy">Філософія</option>
-          <option value="language">Мови</option>
+        <optgroup label="Для інших">
+          <option value="Dota">Dota 2</option>
+          <option value="Genshin">Genshin impact</option>
         </optgroup>
       </select><br><br>
 
@@ -118,7 +117,7 @@
 
   <!-- Форма з POST -->
   <h2>Анкета (POST)</h2>
-  <form action="" method="post" enctype="multipart/form-data">
+  <form action="google.com" method="post" enctype="parts/form-data">
 
     <fieldset>
       <legend>Особисті дані</legend>
@@ -176,17 +175,16 @@
         <option value="Haskel">Haskel</option>
       </select><br><br>
 
-      <p>Групи предметів:</p>
-      <select name="grouped">
-        <optgroup label="Природничі науки">
-          <option value="math">Математика</option>
-          <option value="physics">Фізика</option>
-          <option value="chemistry">Хімія</option>
+      <p>GAme group</p>
+      <select name="Ваша улюблена гра">
+        <optgroup label="Для чоловіків">
+          <option value="colda" disabled>Call of duty</option>
+          <option value="tank">Танки</option>
+          <option value="Hoist the iron">Хойка</option>
         </optgroup>
-        <optgroup label="Гуманітарні науки">
-          <option value="history">Історія</option>
-          <option value="philosophy">Філософія</option>
-          <option value="language">Мови</option>
+        <optgroup label="Для інших">
+          <option value="Dota">Dota 2</option>
+          <option value="Genshin">Genshin impact</option>
         </optgroup>
       </select><br><br>
 
