@@ -1,0 +1,34 @@
+a {
+    color: purple;
+}
+
+a.main{
+    color: green;
+}
+
+ul.berries li {
+  list-style-type: square;
+}
+a.berr{
+    text-decoration: none;
+}
+
+ul.vegetables li {
+  list-style-image: url("li.svg");
+}
+
+ul li a.other {
+  text-decoration: none;
+  color: black;
+}
+
+ol {
+  list-style-position: inside;
+  margin-left: 25px;
+  padding-left: 0;
+}
+ul ul {
+  list-style-type: none;
+  margin-left: 20px;
+  padding-left: 10px;
+}
