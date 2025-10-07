@@ -1,0 +1,29 @@
+*{
+    text-align: center;
+    font-size: larger;
+}
+h1{
+    color: red;
+}
+.bold{
+    font-weight: bold;
+}
+.g{
+    color: green;
+}
+.underline{
+    text-decoration: underline;
+}
+.crossed{
+    text-decoration: line-through;
+    font-size: 24px;
+}
+.bgcolor{
+    background-color: yellow;
+}
+.line{
+  border: none;
+  height: 4px;
+  width: 65%;
+  background-color: green;
+}
