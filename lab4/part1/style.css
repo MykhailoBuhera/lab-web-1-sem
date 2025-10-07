@@ -13,3 +13,23 @@ div {
 .red {
     color: red;
 }
+.notrans{
+    white-space: nowrap;
+}
+#special {
+  font-style: italic;
+  font-weight: bold;
+}
+.shadow {
+  text-shadow: 5px -5px 3px red;
+}
+.decor {
+  text-decoration: line-through;
+  text-transform: uppercase;
+  text-indent: 50px;
+}
+
+.spaced {
+  letter-spacing: 30px;
+  word-spacing: 50px;
+}
