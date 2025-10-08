@@ -2,28 +2,31 @@
     text-align: center;
     font-size: larger;
 }
+
 h1{
-    color: red;
+    color: #ff0000;
 }
+
 .bold{
     font-weight: bold;
 }
-.g{
-    color: green;
-}
+
 .underline{
     text-decoration: underline;
 }
+
 .crossed{
     text-decoration: line-through;
     font-size: 24px;
 }
+
 .bgcolor{
-    background-color: yellow;
+    background-color: #fff000;
 }
+
 .line{
   border: none;
   height: 4px;
   width: 65%;
-  background-color: green;
+  background-color: #008000;
 }

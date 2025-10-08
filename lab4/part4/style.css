@@ -5,7 +5,7 @@ p.text-background span {
 }
 
 div .text-background span {
-    background-color: yellow;
+    background-color: #ffff00;
 }
 
 span span {
@@ -19,7 +19,7 @@ ol span span {
 }
 
 section > p {
-    text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.813);
+    text-shadow: 3px 3px 5px #ff0000;
     text-indent: 50px;
 }
 
@@ -44,5 +44,5 @@ img + p {
 }
 
 section ~ p {
-    color: red;
+    color: #ff0000;
 }

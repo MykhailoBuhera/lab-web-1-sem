@@ -1,9 +1,9 @@
 a {
-    color: purple;
+    color: #800080;
 }
 
 a.main{
-    color: green;
+    color: #008000;
 }
 
 ul.berries li {
@@ -19,7 +19,7 @@ ul.vegetables li {
 
 ul li a.other {
   text-decoration: none;
-  color: black;
+  color: #8000;
 }
 
 ol {
