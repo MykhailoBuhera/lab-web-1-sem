@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Анкета студента</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Форма анкети студента</h1>
+
+  <!-- Форма з GET -->
+  <h2>Анкета (GET)</h2>
+  <form action="" method="get">
+
+    <fieldset>
+      <legend>Особисті дані</legend>
+
+      <label for="name1">Ім’я:</label>
+      <input type="text" id="name1" name="name" placeholder="Введіть ім’я" required tabindex="1"><br><br>
+
+      <label for="password1">Пароль:</label>
+      <input type="password" id="password1" name="password" 
+             placeholder="Введіть пароль" 
+             pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}" 
+             title="Мінімум 6 символів, 1 велика літера, 1 мала літера, 1 цифра" 
+             required><br><br>
+
+      <label for="email1">Email:</label>
+      <input type="email" id="email1" name="email" placeholder="Введіть email" required tabindex="2"><br><br>
+
+      <label for="phone1">Мобільний:</label>
+      <input type="tel" id="phone1" name="phone" placeholder="+380..." required><br><br>
+
+      <label for="birth1">Дата народження:</label>
+      <input type="date" id="birth1" name="birth" required><br><br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Параметри</legend>
+
+      <p>Оберіть стать:</p>
+      <label><input type="radio" name="gender" value="male" checked> Чоловіча</label>
+      <label><input type="radio" name="gender" value="female"> Жіноча</label>
+      <label><input type="radio" name="gender" value="other" disabled> Інша</label><br><br>
+
+      <p>Оберіть улюблені предмети:</p>
+      <label><input type="checkbox" name="subject" value="Web-tech" disabled> others</label>
+      <label><input type="checkbox" name="subject" value="Web-tech" checked> Web-tech</label>
+      <label><input type="checkbox" name="subject" value="Web-tech" disabled> Math</label>
+      <label><input type="checkbox" name="subject" value="english" disabled> PKPZ</label><br><br>
+
+      <p>Виберіть курс навчання:</p>
+      <select name="year">
+        <option value="1">1 курс</option>
+        <option value="2" selected>2 курс</option>
+        <option value="3">3 курс</option>
+        <option value="4">4 курс</option>
+        <option value="5">5 курс</option>
+      </select><br><br>
+
+      <p>Виберіть улюблені мови програмування:</p>
+      <select name="languages" multiple size="4">
+        <option value="Yopta script">Yopta script</option>
+        <option value="python">Python</option>
+        <option value="Brainfuck">Brainfuck</option>
+        <option value="Haskel">Haskel</option>
+      </select><br><br>
+
+      <p>GAme group</p>
+      <select name="Ваша улюблена гра">
+        <optgroup label="Для чоловіків">
+          <option value="colda">Call of duty</option>
+          <option value="tank">Танки</option>
+          <option value="Hoist the iron">Хойка</option>
+        </optgroup>
+        <optgroup label="Для інших">
+          <option value="Dota">Dota 2</option>
+          <option value="Genshin">Genshin impact</option>
+        </optgroup>
+      </select><br><br>
+
+      <p>Місто проживання:</p>
+      <input list="cities1" name="city">
+      <datalist id="cities1">
+        <option value="Тернопіль">
+        <option value="Прекрасний район опілля">
+        <option value="49°34′ пн. ш. 25°36′ сх. д.">
+        <option value="столиця зунр з листопада 1918 по січень 1919">
+        <option value="місто з прекрасним ставом у центрі">
+      </datalist>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Додатково</legend>
+      <label for="comment1">Коментар:</label><br>
+      <textarea id="comment1" name="comment" rows="4" cols="50" placeholder="Ваші побажання" disabled></textarea>
+    </fieldset>
+    <br><br>
+
+    <button type="submit">Надіслати (GET)</button>
+    <button type="reset">Очистити</button>
+  </form>
+
+  <hr><br>
+
+  <!-- Форма з POST -->
+  <h2>Анкета (POST)</h2>
+  <form action="google.com" method="post" enctype="parts/form-data" class ="center">
+
+    <fieldset>
+      <legend>Особисті дані</legend>
+
+      <label for="name2">Ім’я:</label>
+      <input type="text" id="name2" name="name" placeholder="Введіть ім’я" required><br><br>
+
+      <label for="password2">Пароль:</label>
+      <input type="password" id="password2" name="password" 
+             placeholder="Введіть пароль" 
+             pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}" 
+             title="Мінімум 6 символів, 1 велика літера, 1 мала літера, 1 цифра" 
+             required><br><br>
+
+      <label for="email2">Email:</label>
+      <input type="email" id="email2" name="email" placeholder="Введіть email" required><br><br>
+
+      <label for="phone2">Мобільний:</label>
+      <input type="tel" id="phone2" name="phone" placeholder="+380..." required><br><br>
+
+      <label for="birth2">Дата народження:</label>
+      <input type="date" id="birth2" name="birth" required><br><br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Параметри</legend>
+
+      <p>Оберіть стать:</p>
+      <label><input type="radio" name="gender" value="male" checked> Чоловіча</label>
+      <label><input type="radio" name="gender" value="female"> Жіноча</label>
+      <label><input type="radio" name="gender" value="other" disabled> Інша</label><br><br>
+
+      <p>Оберіть улюблені предмети:</p>
+      <label><input type="checkbox" name="subject" value="Web-tech" disabled> others</label>
+      <label><input type="checkbox" name="subject" value="Web-tech" checked> Web-tech</label>
+      <label><input type="checkbox" name="subject" value="Web-tech" disabled> Math</label>
+      <label><input type="checkbox" name="subject" value="english" disabled> PKPZ</label><br><br>
+
+      <p>Виберіть курс навчання:</p>
+      <select name="year">
+        <option value="1">1 курс</option>
+        <option value="2" selected>2 курс</option>
+        <option value="3">3 курс</option>
+        <option value="4">4 курс</option>
+        <option value="5">5 курс</option>
+      </select><br><br>
+
+      <p>Виберіть улюблені мови програмування:</p>
+      <select name="languages" multiple size="4">
+        <option value="Yopta script">Yopta script</option>
+        <option value="python">Python</option>
+        <option value="Brainfuck">Brainfuck</option>
+        <option value="Haskel">Haskel</option>
+      </select><br><br>
+
+      <p>GAme group</p>
+      <select name="Ваша улюблена гра">
+        <optgroup label="Для чоловіків">
+          <option value="colda" disabled>Call of duty</option>
+          <option value="tank">Танки</option>
+          <option value="Hoist the iron">Хойка</option>
+        </optgroup>
+        <optgroup label="Для інших">
+          <option value="Dota">Dota 2</option>
+          <option value="Genshin">Genshin impact</option>
+        </optgroup>
+      </select><br><br>
+
+      <p>Місто проживання:</p>
+      <input list="cities2" name="city">
+      <datalist id="cities2">
+        <option value="Тернопіль">
+        <option value="Прекрасний район опілля">
+        <option value="49°34′ пн. ш. 25°36′ сх. д.">
+        <option value="столиця зунр з листопада 1918 по січень 1919">
+        <option value="місто з прекрасним ставом у центрі">
+      </datalist>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Додатково</legend>
+      <label for="comment2">Коментар:</label><br>
+      <textarea id="comment2" name="comment" rows="4" cols="50" placeholder="Ваші побажання" disabled></textarea>
+    </fieldset>
+    <br><br>
+
+    <button type="submit">Надіслати (POST)</button>
+    <button type="reset">Очистити</button>
+  </form>
+
+  <br><br>
+</body>
+</html>

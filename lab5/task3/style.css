@@ -1,0 +1,30 @@
+body {
+    background-color: lightcoral;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+h2 {
+    color: rgb(106, 0, 0);
+    text-align: center;
+}
+select, input[type="text"], input[type="email"], input[type="number"] {
+    width: 15%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}   
+
+button {
+    background-color: rgb(100, 15, 15);
+    color: rgb(255, 174, 174);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+fieldset {
+    border: 13px solid rgb(150, 50, 50);
+    padding: 10px;
+    margin-bottom: 15px;
+}
