@@ -9,12 +9,20 @@ h2 {
     color: rgb(106, 0, 0);
     text-align: center;
 }
-select, input[type="text"], input[type="email"], input[type="number"] {
+select, input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="date"], 
+input[type="tel"], input[type="citi"] {
     width: 15%;
     padding: 8px;
     margin: 8px 0;
     box-sizing: border-box;
-}   
+    border: 4px solid rgb(150, 50, 50);
+    border-radius: 40px;
+    background-color: rgb(255, 174, 174);
+}  
+
+.center {
+    text-align: center;
+}
 
 button {
     background-color: rgb(100, 15, 15);
@@ -22,9 +30,16 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 40px;
 }
 fieldset {
     border: 13px solid rgb(150, 50, 50);
     padding: 10px;
     margin-bottom: 15px;
+}
+textarea{
+    border: 4px solid rgb(150, 50, 50);
+    border-radius: 20px;
+    background-color: rgb(255, 174, 174);
+    resize: none;
 }
