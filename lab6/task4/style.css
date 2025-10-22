@@ -1,0 +1,124 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f6f8ff;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.wrapper {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* --- Хедер переписаний на float --- */
+.header {
+  margin-bottom: 25px;
+}
+
+/* "Clearfix" для .header, щоб він містив плаваючі елементи всередині */
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left; /* Логотип притискається до лівого краю */
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.menu {
+  float: right; /* Блок меню притискається до правого краю */
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Елементи списку меню тепер плаваючі */
+.menu li {
+  float: left;
+  margin-left: 15px; /* Замінюємо 'gap' на 'margin-left' */
+}
+
+.menu a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f5b2a8;
+  color: #000;
+  text-decoration: none;
+}
+
+/* --- Решта стилів залишаються без змін --- */
+.shadows {
+  width: 870px;
+  margin: 0 auto;
+}
+.shadows::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.shadow {
+  width: 250px;
+  height: 300px;
+  border: 1px solid green;
+  background-color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+  float: left;
+  margin: 20px;
+}
+
+.shadow img {
+  width: 95%;
+  height: 180px;
+  padding: 6px;
+  object-fit: cover;
+}
+
+.shadow h3 {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #000;
+}
+
+.shadow p {
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.shadow1 {
+  box-shadow: -5px -5px 3px 3px green;
+}
+
+.shadow2 {
+  box-shadow: 0 0 10px 10px green;
+}
+
+.shadow3 {
+  box-shadow: 5px 5px 3px 3px greenyellow;
+}
+
+.shadow4 {
+  box-shadow: 0 0 50px 5px green;
+}
+
+.shadow5 {
+  box-shadow: inset -4px 0 0 0 blue, inset 4px 0 0 0 red, inset 0 4px 0 0 green, inset 0 -4px 0 0 orange;
+}
+
+.shadow6 {
+  box-shadow: 0 -10px 0 -5px orange, 0 10px 0 -5px green;
+}
