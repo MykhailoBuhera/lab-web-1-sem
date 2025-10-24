@@ -41,7 +41,7 @@ body {
 /* 4. Стилі для фонового та переднього блоків */
 .card-bg, .card-fg {
     position: absolute; /* Позиціонування всередині .card */
-    box-sizing: border-box; /* Включаємо рамки та відступи в розмір */
+    box-sizing: border-box; /* Враховуємо бордери у розміри */
 }
 
 /* Фоновий блок (нижній шар) */
@@ -78,11 +78,4 @@ body {
 }
 .green {
     background-color: #70ad47;
-}
-
-/* Додаємо ледь помітні лінії, щоб було схоже на зображення */
-.card-fg {
-    background-image: 
-        repeating-linear-gradient(to bottom, transparent 0 24px, rgba(255, 255, 255, 0.25) 25px),
-        repeating-linear-gradient(to right, transparent 0 49px, rgba(255, 255, 255, 0.25) 50px);
 }

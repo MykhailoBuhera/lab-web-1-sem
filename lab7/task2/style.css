@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер для розміщення пар блоків поруч */
+.wrapper {
+    display: flex;
+    gap: 20px; /* Відстань між "Блок 1.1" та "Блок 1.2" */
+}
+
+/* 1. Батьківський елемент для кожної пари.
+  position: relative; робить його точкою відліку для абсолютно позиціонованого 
+  прихованого блоку.
+*/
+.container {
+    position: relative;
+}
+
+/* 2. Стилі для видимих зелених блоків ("Блок 1.1", "Блок 1.2") */
+.trigger-block {
+    background-color: #28a745;
+    color: white;
+    padding: 20px 40px;
+    border: 2px solid #1e7e34;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hidden-block {
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px;
+    border: 2px solid #357ebd;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+
+    /* Позиціонування над тригером */
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);  /*Центруємо блок по горизонталі */
+    margin-bottom: 10px; /* Невеликий відступ зверху */
+
+    opacity: 0;
+    visibility: hidden;
+    }
+
+/* 4. ГОЛОВНА ЛОГІКА:
+  Коли курсор наводиться на .container, ми звертаємось до його дочірнього
+  елемента .hidden-block і робимо його видимим.
+*/
+.container:hover .hidden-block {
+    opacity: 1;
+    visibility: visible;
+}
