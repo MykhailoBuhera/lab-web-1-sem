@@ -146,3 +146,15 @@ body {
   margin-left: 240px;
   padding: 20px;
 }
+.content img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50px;
+  left: 220px;
+}
+.content p {
+  position: absolute;
+  top: 300px;
+  
+}

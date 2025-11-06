@@ -13,12 +13,10 @@ body {
   background-color: #ffffff;
 }
 
-/* --- Хедер переписаний на float --- */
 .header {
   margin-bottom: 25px;
 }
 
-/* "Clearfix" для .header, щоб він містив плаваючі елементи всередині */
 .header::after {
   content: "";
   display: table;
@@ -26,7 +24,7 @@ body {
 }
 
 .logo {
-  float: left; /* Логотип притискається до лівого краю */
+  float: left; 
 }
 
 .logo img {
@@ -36,7 +34,7 @@ body {
 }
 
 .menu {
-  float: right; /* Блок меню притискається до правого краю */
+  float: right; 
 }
 
 .menu ul {
@@ -48,7 +46,7 @@ body {
 /* Елементи списку меню тепер плаваючі */
 .menu li {
   float: left;
-  margin-left: 15px; /* Замінюємо 'gap' на 'margin-left' */
+  margin-left: 15px; 
 }
 
 .menu a {
@@ -59,7 +57,6 @@ body {
   text-decoration: none;
 }
 
-/* --- Решта стилів залишаються без змін --- */
 .shadows {
   width: 870px;
   margin: 0 auto;
