@@ -1,4 +1,4 @@
-let a = 15;
+let a = Math.floor(Math.random() * 30);
 
 console.log(a);
 let b;
