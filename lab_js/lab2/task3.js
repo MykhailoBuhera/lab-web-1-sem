@@ -1,4 +1,4 @@
-function getGradeText_if(grade) {
+function transferGradeToText(grade) {
     if (grade >= 90 && grade <= 100) {
         return "Відмінно";
     } 
@@ -13,17 +13,19 @@ function getGradeText_if(grade) {
     }
 }
 
-console.log(getGradeText_if(85),"\n");
+console.log(transferGradeToText(85),"\n");
 
-function getGradeText(grade) {
+
+function transferGradeToTextShort(grade) {
     return grade >= 90 ? "Відмінно" :
            grade >= 75 ? "Добре" :
            grade >= 60 ? "Задовільно" : "Незадовільно";
 }
 
-console.log(getGradeText(100),"\n");
+console.log(transferGradeToTextShort(100),"\n");
 
-function getSeason_if(mounth) {
+
+function transferSeasonToText(mounth) {
     if (mounth>=1 && mounth<=2 || mounth==12) {
         return "Зима";
     }
@@ -38,11 +40,13 @@ function getSeason_if(mounth) {
     }
 }
 
-console.log(getSeason_if(3),"\n");
+console.log(transferSeasonToText(3),"\n");
 
-function Get_season(mounth) {
+
+function transferSeasonToTextShort(mounth) {
     return mounth>=1 && mounth<=2 || mounth==12 ? "Зима" :
         mounth>=3 && mounth<=5 ? "Весна" :    
         mounth>=6 && mounth<=8 ? "Літо" : "Осінь";
 }
-console.log(Get_season(6),"\n");
+
+console.log(transferSeasonToTextShort(6),"\n");
