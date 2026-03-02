@@ -1,9 +1,9 @@
 const element = document.querySelector('#myElement');
 
 
-element.addEventListener('dblclick', function(event) {
+element.addEventListener('click', function(event) {
 
-    alert('Бугера М.О');
+
     
     event.preventDefault();
 });
