@@ -51,7 +51,7 @@ console.log(transferSeasonToText(3),"\n");
 
 
 function transferSeasonToTextShort(mounth) {
-    return mounth>=1 && mounth<=2 || mounth==12 ? "Зима" :
+    return mounth>=1 && mounth<=2 || mounth == 12 ? "Зима" :
         mounth>=3 && mounth<=5 ? "Весна" :    
         mounth>=6 && mounth<=8 ? "Літо" : 
         mounth>=9 && mounth<=11 ? "Осінь" : "Невірний місяць";
