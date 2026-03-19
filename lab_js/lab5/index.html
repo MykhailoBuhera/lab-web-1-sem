@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №5</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .task-section { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        
+        /* Стилі для Завдання 1: Лампочка */
+        #bulb { width: 100px; height: 100px; border-radius: 50%; background-color: gray; margin: 10px 0; border: 2px solid #000; transition: background-color 0.3s, opacity 0.3s; }
+        #bulb.on.regular { background-color: #ffeb3b; } /* Звичайна */
+        #bulb.on.led { background-color: #e0f7fa; box-shadow: 0 0 20px #00bcd4; } /* Світлодіодна */
+        #bulb.on.eco { background-color: #f1f8e9; box-shadow: 0 0 15px #8bc34a; } /* Енергозберігаюча */
+        
+        /* Стилі для Завдання 2: Світлофор */
+        .tl-box { width: 60px; background-color: #333; padding: 10px; border-radius: 10px; display: inline-block; }
+        .light { width: 50px; height: 50px; border-radius: 50%; background-color: #555; margin-bottom: 5px; }
+        .light.red { background-color: red; box-shadow: 0 0 15px red; }
+        .light.yellow { background-color: yellow; box-shadow: 0 0 15px yellow; }
+        .light.green { background-color: green; box-shadow: 0 0 15px green; }
+        
+        /* Стилі для Завдання 3: Годинник */
+        #clock { font-size: 24px; font-weight: bold; background: black; color: #0f0; padding: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <h1>Лабораторна робота №5</h1>
+    <p>Відкрийте консоль (F12), щоб побачити виконання Завдання 4 з Map та Set.</p>
+
+    <!-- ЗАВДАННЯ 1: Лампочка -->
+    <div class="task-section">
+        <h2>Завдання 1: Лампочка</h2>
+        <select id="bulb-type" onchange="changeBulbType()">
+            <option value="regular">Звичайна</option>
+            <option value="eco">Енергозберігаюча</option>
+            <option value="led">Світлодіодна</option>
+        </select>
+        <div id="bulb" class="off regular"></div>
+        <button onclick="toggleBulb()">Включити/Вимкнути</button>
+        <button onclick="changeBrightness()">Змінити яскравість (prompt)</button>
+        <p><small>*Лампочка автоматично вимкнеться через 5 хвилин бездіяльності.</small></p>
+    </div>
+
+    <!-- ЗАВДАННЯ 2: Світлофор -->
+    <div class="task-section">
+        <h2>Завдання 2: Світлофор</h2>
+        <div class="tl-box">
+            <div id="tl-red" class="light"></div>
+            <div id="tl-yellow" class="light"></div>
+            <div id="tl-green" class="light"></div>
+        </div>
+        <p>Стан: <strong id="tl-status">Вимкнено</strong></p>
+        <button onclick="startTrafficLight()">Запустити світлофор</button>
+        <button onclick="manualNextState()">Наступний стан</button>
+        <button onclick="setCustomDurations()">Змінити тривалість (prompt)</button>
+    </div>
+
+    <!-- ЗАВДАННЯ 3: Дата та час -->
+    <div class="task-section">
+        <h2>Завдання 3: Дата та час</h2>
+        <h3>Цифровий годинник: <span id="clock">00:00:00</span></h3>
+        
+        <hr>
+        <h3>Таймер зворотного відліку</h3>
+        Введіть дату/час: <input type="datetime-local" id="timer-target">
+        <button onclick="startCustomCountdown()">Запустити таймер</button>
+        <p id="timer-output">Очікування...</p>
+
+        <hr>
+        <h3>Календар (До дня народження)</h3>
+        Введіть дату народження (для перегляду місяців/років використовуйте інпут): <input type="date" id="bday-input">
+        <button onclick="calculateBirthday()">Порахувати</button>
+        <p id="bday-output">Результат буде тут...</p>
+    </div>
+
+    <!-- Підключення зовнішнього файлу скриптів -->
+    <script src="script.js"></script>
+</body>
+</html>
