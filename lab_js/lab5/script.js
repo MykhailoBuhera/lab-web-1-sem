@@ -1,5 +1,5 @@
 // ==========================================
-// ЗАВДАННЯ 1: Лампочка (className та classList)
+// ЗАВДАННЯ 1 Лампочка (className та classList)
 // ==========================================
 let isBulbOn = false;
 let bulbInactivityTimer;
@@ -44,12 +44,11 @@ function turnOffAutomatically() {
 
 function resetAutoTurnOffTimer() {
     clearTimeout(bulbInactivityTimer);
-    // 5 хвилин = 300000 мілісекунд
     bulbInactivityTimer = setTimeout(turnOffAutomatically, 300000); 
 }
 
 // ==========================================
-// ЗАВДАННЯ 2: Світлофор (setTimeout)
+// ЗАВДАННЯ 2 Світлофор (setTimeout)
 // ==========================================
 let tlState = -1; // -1: вимкнено, 0: червоний, 1: жовтий, 2: зелений, 3: миготливий жовтий
 let tlTimeout;
@@ -60,7 +59,6 @@ function updateTrafficLightUI(redOn, yellowOn, greenOn, text) {
     document.getElementById('tl-red').className = redOn ? 'light red' : 'light';
     document.getElementById('tl-yellow').className = yellowOn ? 'light yellow' : 'light';
     document.getElementById('tl-green').className = greenOn ? 'light green' : 'light';
-    // Виведення словесного опису стану
     document.getElementById('tl-status').innerText = text;
 }
 
@@ -82,7 +80,7 @@ function runTrafficLightState() {
 }
 
 function blinkYellowPhase() {
-    if (blinkCount >= 6) { // 3 рази ввімкнути і вимкнути (разом 6 кроків)
+    if (blinkCount >= 6) { 
         tlState = 0;
         runTrafficLightState();
         return;
@@ -92,11 +90,11 @@ function blinkYellowPhase() {
     updateTrafficLightUI(false, isYellowOn, false, "Миготливий жовтий");
     
     blinkCount++;
-    tlTimeout = setTimeout(blinkYellowPhase, 500); // мигання кожні 0.5 сек
+    tlTimeout = setTimeout(blinkYellowPhase, 500); // мигання 0.5 сек
 }
 
 function startTrafficLight() {
-    tlState = 0; // Починаємо з червоного
+    tlState = 0; 
     runTrafficLightState();
 }
 
@@ -111,7 +109,6 @@ function manualNextState() {
 }
 
 function setCustomDurations() {
-    // Зміна тривалості через prompt
     let r = prompt("Час червоного (в секундах):", "5");
     let y = prompt("Час жовтого (в секундах):", "3");
     let g = prompt("Час зеленого (в секундах):", "7");
@@ -123,7 +120,7 @@ function setCustomDurations() {
 }
 
 // ==========================================
-// ЗАВДАННЯ 3: Дата та час
+// ЗАВДАННЯ 3 Дата та час
 // ==========================================
 
 // 3.1 Цифровий годинник із мигаючим індикатором
@@ -190,7 +187,7 @@ function calculateBirthday() {
 }
 
 // ==========================================
-// ЗАВДАННЯ 4: Інтернет-магазин (Map, Set, WeakMap, WeakSet)
+// ЗАВДАННЯ 4 Інтернет-магазин (Map, Set, WeakMap, WeakSet)
 // ==========================================
 
 let catalog = new Map();              // Зберігання товарів (ключ - ID, значення - об'єкт)

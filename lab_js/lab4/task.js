@@ -4,7 +4,7 @@ function displayElements(arr) {
     }
 }
 
-// ЗАВДАННЯ 1: Масив фруктів
+// ЗАВДАННЯ 1 Масив фруктів
 let fruits = ["яблуко", "банан", "апельсин", "груша"];
 let newFruit = "ананас";
 
@@ -199,6 +199,14 @@ function spliceFirstThree(arr) {
     return arr;
 }
 
+
+function myForEac(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        callback(arr[i], i, arr);
+    }
+}
+myForEac(numbers, (num) => console.log(num * 2)); // приклад використання myForEach
+
 console.log(" Завдання 5");
 console.log("Початковий масив чисел");
 displayElements(numbers);
@@ -214,6 +222,8 @@ displayElements(numbers);
 console.log("\nВидалення перших 3 елементів ");
 spliceFirstThree(numbers);
 displayElements(numbers);
+
+
 console.log("\n");
 
 
@@ -265,10 +275,10 @@ function getBooksStatistics(books) {
     let avgPages = total === 0 ? 0 : totalPages / total;
     
     return {
-        загалом_книг: total,
-        доступних: available,
-        взятих: borrowed,
-        середня_кількість_сторінок: avgPages
+        avgTotal: total,
+        available,
+        borrowed,
+        avgPages
     };
 }
 
