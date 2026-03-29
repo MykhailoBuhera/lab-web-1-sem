@@ -1,6 +1,4 @@
-// ==========================================
-// ЗАВДАННЯ 1 Лампочка (className та classList)
-// ==========================================
+//1
 let isBulbOn = false;
 let bulbInactivityTimer;
 
@@ -47,10 +45,8 @@ function resetAutoTurnOffTimer() {
     bulbInactivityTimer = setTimeout(turnOffAutomatically, 300000); 
 }
 
-// ==========================================
-// ЗАВДАННЯ 2 Світлофор (setTimeout)
-// ==========================================
-let tlState = -1; // -1: вимкнено, 0: червоний, 1: жовтий, 2: зелений, 3: миготливий жовтий
+// 2
+let tlState = -1; // -1 вимкнено 0 червоний 1 жовтий, 2 зелений 3 миготливий жовтий
 let tlTimeout;
 let tlDurations = { red: 5000, yellow: 3000, green: 7000 };
 let blinkCount = 0;
@@ -119,9 +115,7 @@ function setCustomDurations() {
     }
 }
 
-// ==========================================
 // ЗАВДАННЯ 3 Дата та час
-// ==========================================
 
 // 3.1 Цифровий годинник із мигаючим індикатором
 function updateDigitalClock() {
@@ -186,13 +180,11 @@ function calculateBirthday() {
         `До дня народження: ${months} міс, ${days} днів, ${hours} год, ${mins} хв, ${secs} сек.`;
 }
 
-// ==========================================
 // ЗАВДАННЯ 4 Інтернет-магазин (Map, Set, WeakMap, WeakSet)
-// ==========================================
 
-let catalog = new Map();              // Зберігання товарів (ключ - ID, значення - об'єкт)
+let catalog = new Map();              // Зберігання товарів 
 let ordersArchive = new Set();        // Зберігання унікальних номерів замовлень
-let productHistory = new WeakMap();   // Історія змін ціни/кількості (об'єкт -> масив історії)
+let productHistory = new WeakMap();   // Історія змін ціни/кількості 
 let processedOrders = new WeakSet();  // Відстеження оброблених об'єктів-замовлень
 
 function displayElement(text) {
