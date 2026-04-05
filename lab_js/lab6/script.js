@@ -5,7 +5,7 @@ let state = {
   editingId: null
 };
 
-// PURE FUNCTIONS
+// PURE FUNCTIONS  state напряму не мінятб а повертають нові дані
 const addProduct = (products, product) => [...products, product];
 
 const deleteProduct = (products, id) =>
@@ -38,7 +38,7 @@ const render = () => {
   let data = filterProducts(state.products, state.filter);
   data = sortProducts(data, state.sort);
 
-  list.innerHTML = '';
+  list.innerHTML = ''; // очистити список перед рендером
 
   if (data.length === 0) {
     empty.innerText = "Наразі список товарів пустий.";
@@ -75,7 +75,7 @@ const showToast = (text) => {
 };
 
 // ACTIONS
-const openModal = () => {
+const openModal = () => {// vidkruv vikno pru add btn
   document.getElementById('modal').style.display = 'flex';
 };
 

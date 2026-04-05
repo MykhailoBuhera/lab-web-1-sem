@@ -96,7 +96,7 @@ function startTrafficLight() {
 
 function manualNextState() {
     clearTimeout(tlTimeout);
-    if (tlState === 0) tlState = 1;
+    if (tlState === 0) tlState = 1; 
     else if (tlState === 1) tlState = 2;
     else if (tlState === 2) { tlState = 3; blinkCount = 0; blinkYellowPhase(); return; }
     else if (tlState === 3) tlState = 0;
@@ -115,7 +115,7 @@ function setCustomDurations() {
     }
 }
 
-// ЗАВДАННЯ 3 Дата та час
+//3 
 
 // 3.1 Цифровий годинник із мигаючим індикатором
 function updateDigitalClock() {
@@ -133,7 +133,7 @@ let customCountdownTimer;
 function startCustomCountdown() {
     clearInterval(customCountdownTimer);
     let targetVal = document.getElementById('timer-target').value;
-    if (!targetVal) return alert("Введіть дату!");
+    if (!targetVal) return alert("Введіть дату!");//alert це як throw exception?
     let targetDate = new Date(targetVal).getTime();
 
     customCountdownTimer = setInterval(() => {
@@ -162,7 +162,7 @@ function calculateBirthday() {
     let now = new Date();
     
     // Встановлюємо поточний рік для дня народження
-    target.setFullYear(now.getFullYear());
+    target.setFullYear(now.getFullYear()); // без нього йшло в мінус 
     if (now > target) {
         target.setFullYear(now.getFullYear() + 1); // Якщо вже пройшло цього року, беремо наступний
     }
@@ -180,7 +180,7 @@ function calculateBirthday() {
         `До дня народження: ${months} міс, ${days} днів, ${hours} год, ${mins} хв, ${secs} сек.`;
 }
 
-// ЗАВДАННЯ 4 Інтернет-магазин (Map, Set, WeakMap, WeakSet)
+// 4 
 
 let catalog = new Map();              // Зберігання товарів 
 let ordersArchive = new Set();        // Зберігання унікальних номерів замовлень
@@ -240,7 +240,6 @@ function placeOrder(orderId, productId, amount) {
     }
 }
 
-// --- ДЕМОНСТРАЦІЯ ЗАВДАННЯ 4 В КОНСОЛІ ---
 console.log("--- ЗАВДАННЯ 4: МАГАЗИН (Map, Set) ---");
 
 console.log("1. Додавання продуктів:");
