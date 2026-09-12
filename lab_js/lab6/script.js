@@ -73,14 +73,23 @@ const showToast = (text) => {
 
   setTimeout(() => toast.classList.remove('show'), 2000);
 };
+const modal = document.getElementById('modal')
+
 
 // ACTIONS
 const openModal = () => {// vidkruv vikno pru add btn
-  document.getElementById('modal').style.display = 'flex';
+  modal.style.display = 'flex';
 };
 
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    //closeModal();
+    console.log(e.target);
+  }
+});
+
 const closeModal = () => {
-  document.getElementById('modal').style.display = 'none';
+  modal.style.display = 'none';
   document.getElementById('form').reset();
   state.editingId = null;
 };

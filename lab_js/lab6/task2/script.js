@@ -1,6 +1,6 @@
 
 
-/** * 1. ЧИСТІ ФУНКЦІЇ (Pure Functions) [cite: 73]
+/** *  ЧИСТІ ФУНКЦІЇ (Pure Functions)
  */
 const createTask = (tasks, text) => [
     ...tasks, 
@@ -31,7 +31,7 @@ const sortTasks = (tasks, criteria) => {
     return sorted;
 };
 
-/** * 2. СТАН ТА РЕНДЕР
+/** *  СТАН ТА РЕНДЕР
  */
 let state = {
     tasks: [],
@@ -60,7 +60,7 @@ const render = () => {
     });
 };
 
-// Додавання [cite: 63]
+// Додавання 
 elements.form.addEventListener('submit', (e) => {
     e.preventDefault();
     state.tasks = createTask(state.tasks, elements.input.value);
@@ -75,7 +75,7 @@ elements.list.addEventListener('click', (e) => {
          return;
     } 
 
-    // Видалення [cite: 65]
+    // Видалення 
     if (e.target.classList.contains('js-delete')) {
         const item = e.target.closest('.todo-item');
         item.classList.add('removing');
@@ -85,7 +85,7 @@ elements.list.addEventListener('click', (e) => {
         }, 300);
     }
 
-    // Відзначення як виконане [cite: 67]
+    // Відзначення як виконане 
     if (e.target.classList.contains('js-toggle')) {
         state.tasks = toggleTaskStatus(state.tasks, id);
         render();
